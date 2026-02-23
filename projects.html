@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Pooja S</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="slide-in projects-page">
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a href="index.html" class="brand-name">Pooja<span class="brand-highlight">S</span></a>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+    <li><a href="experience.html" class="nav-link">Experience</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+  </ul>
+</nav>
+
+<section class="projects">
+  <div class="projects-header">
+    <h2>Featured Projects</h2>
+    <p class="projects-subtitle">Showcasing innovative solutions and technical expertise</p>
+  </div>
+
+  <div class="projects-container">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-badge">Featured</div>
+      </div>
+      <h3>Docwise AI</h3>
+      <p>A medical history analyzer and doctor recommendation system.</p>
+      <div class="project-tags">
+        <span>Python</span>
+        <span>Machine Learning</span>
+      </div>
+      <div class="project-footer">
+        <button class="project-link view-details"
+          data-title="Docwise AI"
+          data-description="Docwise AI is a medical history analyzer and doctor recommendation system built using Python and Machine Learning. It processes patient records to suggest suitable specialists, analyze historical trends, and provide intelligent insights to assist healthcare decision-making.">
+          View Details →
+        </button>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-badge">Complete</div>
+      </div>
+      <h3>Smart Indoor Air Quality Monitoring</h3>
+      <p>IoT-based system to monitor air quality.</p>
+      <div class="project-tags">
+        <span>IoT</span>
+        <span>Sensors</span>
+        <span>Real-time Data</span>
+      </div>
+      <div class="project-footer">
+        <button class="project-link view-details"
+          data-title="Smart Indoor Air Quality Monitoring"
+          data-description="This IoT-based system monitors indoor air quality parameters such as temperature, humidity, and pollutant levels. It provides real-time data visualization, automatic alerts for unsafe conditions, and supports analytics for optimizing indoor environments.">
+          View Details →
+        </button>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-badge">Complete</div>
+      </div>
+      <h3>Decision Fatigue Guard</h3>
+      <p>A Chrome extension to reduce cognitive overload.</p>
+      <div class="project-tags">
+        <span>TypeScript</span>
+        <span>Vite</span>
+        <span>Chrome Extension</span>
+      </div>
+      <div class="project-footer">
+        <button class="project-link view-details"
+          data-title="Decision Fatigue Guard"
+          data-description="Decision Fatigue Guard is a Chrome extension developed using Vite and TypeScript. It helps users manage cognitive load by organizing choices, providing reminders, and limiting distractions to improve focus and reduce mental fatigue during decision-making tasks.">
+          View Details →
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div class="modal" id="projectModal">
+  <div class="modal-content">
+    <button class="close-modal" id="closeModal">✕</button>
+    <h3 id="modalTitle">Project Title</h3>
+    <p id="modalDescription">Project description will appear here.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

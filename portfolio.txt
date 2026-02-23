@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pooja S | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1f1f1f, #333);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  margin: 5px 0;
+  opacity: 0.9;
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Headings */
+h2 {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+h2::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #0066cc;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: width 0.5s ease;
+}
+
+section.show h2::after {
+  width: 50px;
+}
+
+/* Skill tags */
+.tag {
+  display: inline-block;
+  background: #e8ecf1;
+  padding: 8px 14px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #0066cc;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #1f1f1f;
+  color: #fff;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pooja S</h1>
+  <p>Computer Science Engineering | Pre-Final Year</p>
+  <p>Panimalar Engineering College</p>
+  <p>📧 poojasuresh6383@gmail.com</p>
+</header>
+
+<section>
+  <h2>Career Objective</h2>
+  <p>
+    Pre-final year CSE student with a strong interest in software development, aiming
+    to start my career in a reputed organization that offers learning opportunities
+    and practical exposure.
+  </p>
+</section>
+
+<section>
+  <h2>About Me</h2>
+  <p>
+    I am a pre-final year Computer Science Engineering student who enjoys building
+    practical software solutions and learning new technologies. I am eager to grow
+    in a professional environment and contribute meaningfully to real-world projects.
+  </p>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+
+  <h3>Programming Languages</h3>
+  <span class="tag">Java</span>
+  <span class="tag">Python</span>
+  <span class="tag">SQL</span>
+  <span class="tag">HTML5</span>
+  <span class="tag">CSS</span>
+
+  <h3>Tools & Technologies</h3>
+  <span class="tag">Git</span>
+  <span class="tag">GitHub</span>
+  <span class="tag">VS Code</span>
+  <span class="tag">Eclipse</span>
+  <span class="tag">MySQL (Basic)</span>
+
+  <h3>Core CS Subjects</h3>
+  <span class="tag">OOP (Java)</span>
+  <span class="tag">DBMS</span>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <h3>Docwise AI – Smart Medical History Analyzer</h3>
+  <ul>
+    <li>Built a machine learning application to analyze medical history</li>
+    <li>Applied data preprocessing and classification using Python</li>
+    <li>Used Scikit-learn and Pandas libraries</li>
+  </ul>
+
+  <h3>Smart Indoor Air Quality Monitoring System</h3>
+  <ul>
+    <li>Designed an IoT-based solution to monitor indoor air quality</li>
+    <li>Worked on sensor data collection and analysis</li>
+  </ul>
+
+  <h3>Decision Fatigue Guard – Chrome Extension</h3>
+  <ul>
+    <li>Developed a Chrome extension using TypeScript and Vite</li>
+    <li>Implemented logical filtering using a logistic algorithm</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Experience & Training</h2>
+
+  <ul>
+    <li><strong>Web Design Intern – DLK Solutions (20 Days)</strong></li>
+    <li><strong>Full Stack Development Intern – Virtual Tech Services (1 Month)</strong></li>
+    <li><strong>Professional Training – QSpiders</strong></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li>Python Programming – Infosys Springboard</li>
+    <li>Introduction to Machine Learning – Infosys Springboard</li>
+    <li>Programming in Java – NPTEL (SWAYAM)</li>
+    <li>UiPath Automation Developer Associate Training</li>
+  </ul>
+</section>
+
+<footer>
+  <p>GitHub & LinkedIn links will be added</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.15 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
